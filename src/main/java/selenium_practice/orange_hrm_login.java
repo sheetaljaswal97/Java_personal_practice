@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class orange_hrm_login {
 
-	@Test
+	@Test(invocationCount = 2)
 	@Parameters({"username","password"})
 	public void login(String username,String password) throws InterruptedException
 	{
@@ -17,8 +17,7 @@ public class orange_hrm_login {
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		Thread.sleep(3000);
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
-		
+		Thread.sleep(2000);		
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(username);
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(password);
