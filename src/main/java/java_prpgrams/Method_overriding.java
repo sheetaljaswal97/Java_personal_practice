@@ -14,7 +14,7 @@ class second_overriding extends first_overriding
 {
 	public void method()
 	{
-		System.out.println("method second");
+		System.out.println("method second abc");
 		super.method();
 	}
 }
